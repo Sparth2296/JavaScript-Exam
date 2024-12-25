@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div id="app">
+    <h1>Task Manager</h1>
+    <form id="task-form">
+        Task : <br>
+      <input type="text" id="title" placeholder="Task Title" required>
+      Description : <br>
+      <textarea id="description" placeholder="Task Description"></textarea>
+     Date : <br>
+      <input type="date" id="due-date" required>
+      Priority  : <br>
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="filters">
+      <label for="priority-filter">Filter by Priority:</label>
+      <select id="priority-filter">
+        <option value="all">All</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
